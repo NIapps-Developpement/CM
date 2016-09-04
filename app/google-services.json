@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "959581931715",
+    "firebase_url": "https://agendacm-36e5d.firebaseio.com",
+    "project_id": "agendacm-36e5d",
+    "storage_bucket": "agendacm-36e5d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959581931715:android:f76dabbfb1b6347a",
+        "android_client_info": {
+          "package_name": "com.niapp.agendacm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959581931715-2icthbffh5u1g0cpo90olc6254jdead2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8_xb18wgYRwvKjibc7dOxuS4EBjNCQAA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

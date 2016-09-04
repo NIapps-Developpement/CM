@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single" android:id="@+id/grp1">
+        <item
+            android:id="@+id/nav_first_layout"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+            android:title="NewsFeed" />
+        <item
+            android:id="@+id/nav_second_layout"
+            android:icon="@drawable/ic_date_range_black_24dp"
+            android:title="Calendrier" />
+    </group>
+    <group android:title="Communication" android:checkableBehavior="single" android:id="@+id/grp2">
+        <item
+            android:id="@+id/nav_third_layout"
+            android:icon="@drawable/ic_contacts_black_24dp"
+            android:title="Contact" />
+        <item
+            android:id="@+id/nav_fourth_layout"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Publication" />
+    </group>
+    <group android:checkableBehavior="single" android:id="@+id/grp3">
+        <item
+            android:id="@+id/nav_fifth_layout"
+            android:icon="@drawable/ic_people_outline_black_24dp"
+            android:title="Sponsors" />
+    </group>
+</menu>
+

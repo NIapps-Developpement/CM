@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/gris_clair" android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="#292929"
+        android:id="@+id/ban"/>
+    <ImageButton
+        android:layout_margin="7dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/drawer"
+        android:background="@drawable/ic_menu_white_24dp" />
+    <ImageButton
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
+        android:background="@drawable/cm"
+        android:id="@+id/rbut"
+        android:layout_marginTop="7dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ban"
+        android:background="#101010"
+        android:id="@+id/imageView" />
+    µ<ListView
+    android:layout_margin="7dp"
+        android:id="@+id/list_itemcal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+    android:dividerHeight="10dp"
+    android:divider="@color/gris_clair"
+    android:layout_below="@+id/imageView" />
+
+</RelativeLayout>
