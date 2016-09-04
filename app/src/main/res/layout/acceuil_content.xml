@@ -25,7 +25,9 @@
         android:textAlignment="center"/>
 <ImageView
     android:layout_width="wrap_content"
-    android:layout_height="80dp"
-    android:src="@drawable/niapps_rgb_06"
-    android:layout_alignParentBottom="true"/>
+    android:layout_height="120dp"
+    android:src="@drawable/niapps_rgb_05"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginBottom="53dp" />
 </RelativeLayout>
