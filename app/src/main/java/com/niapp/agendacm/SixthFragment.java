@@ -53,12 +53,14 @@ public class SixthFragment extends Fragment {
         myView = inflater.inflate(R.layout.presses_layout, container, false);
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         final DrawerLayout draw = (DrawerLayout) getActivity().findViewById(R.id.drawer_layout);
-        Spinner dropdown = (Spinner)getActivity().findViewById(R.id.listpick1);
-        String[] items = new String[]{"1", "2", "three"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+        Spinner section = (Spinner)getActivity().findViewById(R.id.listpick1);
+        String[] section_list = new String[]{"MEDI", "DENT", "VETE","BIME"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, section_list);
+        section.setAdapter(adapter);
+        Spinner année = (Spinner)getActivity().findViewById(R.id.listpick1);
+        String[] année_list = new String[]{"BA1", "BA2", "BA3","MA1", "MA2", "MA3"};
+        année.setAdapter(adapter);
         return myView;
-
         }
 
 
