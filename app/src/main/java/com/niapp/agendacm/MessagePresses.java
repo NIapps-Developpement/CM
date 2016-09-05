@@ -22,4 +22,5 @@ public class MessagePresses extends Activity{
     String[] annee_list = new String[]{"BA1", "BA2", "BA3","MA1", "MA2", "MA3"};
     ArrayAdapter<String> annee_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, annee_list);
     annee.setAdapter(annee_adapter);
-}}
+}
+}
