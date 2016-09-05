@@ -32,7 +32,7 @@
         android:layout_margin="20dp"
         android:textColor="@color/gris"
         android:textStyle="italic"
-        android:textSize="20dp"
+        android:textSize="15dp"
         android:id="@+id/biere"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" /></RelativeLayout>
