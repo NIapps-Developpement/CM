@@ -41,7 +41,6 @@ public class FirstFragment extends Fragment {
     ImageButton refresh;
     ImageButton drawer;
     String showUrl = "http://cm.890m.com/newsfeedshow.php";
-    TextView result;
     RequestQueue requestQueue;
     View myView;
 
