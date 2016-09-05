@@ -66,7 +66,6 @@ public class Message extends Activity{
                         public void onErrorResponse(VolleyError error) {
                         }
                     });
-// Add the request to the RequestQueue.
 
                     queue.add(stringRequest);
                     int y = FourthFragment.getI();
@@ -95,6 +94,8 @@ public class Message extends Activity{
                     } else if (y == 7) {
                         q = true;
                         service = "#RCP";
+                    } else if (y == 8) {
+                        startActivity(new Intent(Message.this, MessagePresses.class));
                     }
                     if(check.isEmpty()){
                         Toast toast = Toast.makeText(context, text2, duration);
