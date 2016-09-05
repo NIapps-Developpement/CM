@@ -80,6 +80,13 @@ public class MainActivity extends AppCompatActivity
                     .commit();
 
         }
+        else if (id == R.id.nav_sixth_layout) {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frame
+                            , new SixthFragment())
+                    .commit();
+
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
