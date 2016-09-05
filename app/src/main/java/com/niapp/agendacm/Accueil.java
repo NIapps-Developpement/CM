@@ -18,6 +18,6 @@ public class Accueil extends AppCompatActivity {
                Accueil.this.startActivity(mainIntent);
                 Accueil.this.finish();
             }
-        }, 1000);
+        }, 1001);
     }
 }
