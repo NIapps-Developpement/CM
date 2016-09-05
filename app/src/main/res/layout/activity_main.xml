@@ -29,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Biere spéciale"
-        android:layout_margin="25dp"
+        android:layout_margin="20dp"
         android:textColor="@color/gris_fonce"
         android:textSize="20dp"
         android:id="@+id/biere"
