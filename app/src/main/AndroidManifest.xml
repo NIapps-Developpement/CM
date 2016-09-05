@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait" />
         <activity android:name=".Message" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait"/>
+        <activity android:name=".MessagePresses" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait"/>
         <!--²
                 Defining Services
             -->

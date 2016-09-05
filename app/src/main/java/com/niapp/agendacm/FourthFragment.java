@@ -79,15 +79,17 @@ public class FourthFragment extends Fragment {
 
                                 String mdpgood = mdp.getString("Mdp");
                                 System.out.println(mdpgood);
-                                if (mdpgood.equals(mdptry) && i==8) {
-
-                                    startActivity(new Intent(FourthFragment.this.getActivity(), MessagePresses.class));
-
-                                    startActivity(new Intent(FourthFragment.this.getActivity(), Message.class));
-                                    System.out.println("Loop Value = " + i);
-                                    setI(i);
-                                    v.cancel();
-                                    toast.cancel();
+                                if (mdpgood.equals(mdptry)) {
+                                    if(i==8){
+                                        startActivity(new Intent(FourthFragment.this.getActivity(), MessagePresses.class));
+                                    }
+                                    else {
+                                        startActivity(new Intent(FourthFragment.this.getActivity(), Message.class));
+                                        System.out.println("Loop Value = " + i);
+                                        setI(i);
+                                        v.cancel();
+                                        toast.cancel();
+                                    }
                                 }
                                 else {
                                     v.vibrate(500);
