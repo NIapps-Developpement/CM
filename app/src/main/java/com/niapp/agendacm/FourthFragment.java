@@ -82,6 +82,9 @@ public class FourthFragment extends Fragment {
                                 if (mdpgood.equals(mdptry)) {
                                     if(i==8){
                                         startActivity(new Intent(FourthFragment.this.getActivity(), MessagePresses.class));
+                                        setI(i);
+                                        v.cancel();
+                                        toast.cancel();
                                     }
                                     else {
                                         startActivity(new Intent(FourthFragment.this.getActivity(), Message.class));

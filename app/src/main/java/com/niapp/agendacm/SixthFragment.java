@@ -67,10 +67,10 @@ public class SixthFragment extends Fragment {
 
         final Spinner section = (Spinner)myView.findViewById(R.id.listpick1);
         String[] section_list = new String[]{"MEDI", "DENT", "VETE","BIME"};
-        ArrayAdapter<String> section_adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, section_list);
+        final ArrayAdapter<String> section_adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, section_list);
         section.setAdapter(section_adapter);
 
-        Spinner annee = (Spinner)myView.findViewById(R.id.listpick2);
+        final Spinner annee = (Spinner)myView.findViewById(R.id.listpick2);
         String[] annee_list = new String[]{"BA1", "BA2", "BA3","MA1", "MA2", "MA3"};
         final ArrayAdapter<String> annee_adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, annee_list);
         annee.setAdapter(annee_adapter);
@@ -79,6 +79,75 @@ public class SixthFragment extends Fragment {
             public void onItemSelected(AdapterView<?> annee_adapter, View view, int position, long id) {
                 String text1 = annee_adapter.getSelectedItem().toString();
                 String text2 = section.getSelectedItem().toString();
+                System.out.println(text1);
+                System.out.println(text2);
+                final String groupgen = text2 + "-" + text1;
+                System.out.println(groupgen);
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
+                        showUrl, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        System.out.println(response.toString());
+                try {
+
+                    JSONArray presses = response.getJSONArray("presses");
+                    ArrayList<Item> itemspr = new ArrayList<>();
+                    for (int i = 0; i < presses.length(); i++) {
+
+                        JSONObject presse = presses.getJSONObject(i);
+                        String group = presse.getString("group");
+                        String message = presse.getString("message");
+                    if(Objects.equals(groupgen, group)) {
+                        Item msg = new Item(message, group);
+                        itemspr.add(msg);
+                    }
+
+
+
+                    }
+                    BindDictionary<Item> dictionary = new BindDictionary<>();
+                    dictionary.addStringField(R.id.tvName, new StringExtractor<Item>() {
+                        @Override
+                        public String getStringValue(Item itemspr, int position) {
+                            return itemspr.getName();
+                        }
+                    });
+                    dictionary.addStringField(R.id.tvDate, new StringExtractor<Item>() {
+                        @Override
+                        public String getStringValue(Item itemspr, int position) {
+                            return "" + itemspr.getDate();
+                        }
+                    });
+
+                    FunDapter adapter = new FunDapter(SixthFragment.this.getActivity(), itemspr, R.layout.item_layout, dictionary);
+
+                    ListView lvItem = (ListView)myView.findViewById(R.id.list_itempr);
+                    lvItem.setAdapter(adapter);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.append(error.getMessage());
+
+            }
+        });
+        requestQueue.add(jsonObjectRequest);
+            }
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+          section.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> section_adapter, View view, int position, long id) {
+                String text1 = annee.getSelectedItem().toString();
+                String text2 = section_adapter.getSelectedItem().toString();
                 System.out.println(text1);
                 System.out.println(text2);
                 final String groupgen = text2 + "-" + text1;

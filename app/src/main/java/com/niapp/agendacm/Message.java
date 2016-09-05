@@ -27,7 +27,6 @@ import java.util.Map;
  */
 public class Message extends Activity{
     String insertUrlmsg = "http://cm.890m.com/postnewsfeed.php";
-    String insertUrlnom = "http://cm.890m.com/postnomdeleg.php";
     EditText idea;
     ImageButton send;
     String msg;
