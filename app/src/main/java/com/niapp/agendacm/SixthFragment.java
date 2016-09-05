@@ -55,11 +55,12 @@ public class SixthFragment extends Fragment {
         final DrawerLayout draw = (DrawerLayout) getActivity().findViewById(R.id.drawer_layout);
         Spinner section = (Spinner)getActivity().findViewById(R.id.listpick1);
         String[] section_list = new String[]{"MEDI", "DENT", "VETE","BIME"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, section_list);
-        section.setAdapter(adapter);
+        ArrayAdapter<String> section_adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, section_list);
+        section.setAdapter(section_adapter);
         Spinner année = (Spinner)getActivity().findViewById(R.id.listpick1);
         String[] année_list = new String[]{"BA1", "BA2", "BA3","MA1", "MA2", "MA3"};
-        année.setAdapter(adapter);
+        ArrayAdapter<String> année_adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_dropdown_item, année_list);
+        année.setAdapter(année_adapter);
         return myView;
         }
 
