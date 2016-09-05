@@ -48,6 +48,34 @@ public class Message extends Activity{
         final Context context = getApplicationContext();
         final CharSequence text2 = "Veuillez rentrer une information";
         final int duration = Toast.LENGTH_SHORT;
+        int y = FourthFragment.getI();
+        if (y == 0) {
+            q = true;
+            service = "#PCM";
+        } else if (y == 1) {
+            q = true;
+            service = "#Info-Photo";
+        } else if (y == 2) {
+            q = true;
+            service = "#Bar";
+        } else if (y == 3) {
+            q = true;
+            service = "#LASC";
+        } else if (y == 4) {
+            q = true;
+            service = "#BALEF";
+        } else if (y == 5) {
+            q = true;
+            service = "#Event";
+        } else if (y == 6) {
+            q = true;
+            service = "#Info-Comm";
+        } else if (y == 7) {
+            q = true;
+            service = "#RCP";
+        } else if (y == 8) {
+            startActivity(new Intent(Message.this, MessagePresses.class));
+        }
             send.setOnClickListener(new View.OnClickListener() {
                 @Override
             public void onClick(View view) {
@@ -68,35 +96,9 @@ public class Message extends Activity{
                     });
 
                     queue.add(stringRequest);
-                    int y = FourthFragment.getI();
+
                     check = idea.getText().toString();
-                    if (y == 0) {
-                        q = true;
-                        service = "#PCM";
-                    } else if (y == 1) {
-                        q = true;
-                        service = "#Info-Photo";
-                    } else if (y == 2) {
-                        q = true;
-                        service = "#Bar";
-                    } else if (y == 3) {
-                        q = true;
-                        service = "#LASC";
-                    } else if (y == 4) {
-                        q = true;
-                        service = "#BALEF";
-                    } else if (y == 5) {
-                        q = true;
-                        service = "#Event";
-                    } else if (y == 6) {
-                        q = true;
-                        service = "#Info-Comm";
-                    } else if (y == 7) {
-                        q = true;
-                        service = "#RCP";
-                    } else if (y == 8) {
-                        startActivity(new Intent(Message.this, MessagePresses.class));
-                    }
+
                     if(check.isEmpty()){
                         Toast toast = Toast.makeText(context, text2, duration);
                         toast.show();
