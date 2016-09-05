@@ -1,9 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="prout"/>
-</LinearLayout>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.niapp.agendacm.FirstFragment"
+    android:background="@color/gris_clair">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="#292929"
+            android:id="@+id/ban"/>
+        <ImageButton
+            android:layout_margin="7dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/drawer"
+            android:background="@drawable/ic_menu_white_24dp"/>
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@drawable/cm"
+            android:id="@+id/rbut"
+            android:layout_marginTop="7dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <Spinner
+            android:id="@+id/listpick1"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/rbut"
+            android:layout_marginLeft="10dp"/>
+        <Spinner
+            android:id="@+id/listpick2"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/rbut"
+            android:layout_alignRight="@id/ban"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/ban"
+            android:background="#101010"
+            android:id="@+id/imageView" />
+        <LinearLayout
+            android:id="@+id/news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:layout_below="@+id/imageView">
+            <include layout="@layout/content_scrolling"
+                /></LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
