@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:background="@color/gris_clair">
+
+    <ImageButton android:background="@drawable/cm"
+        android:id="@+id/send"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <Spinner
+        android:id="@+id/listset2"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/send"
+        android:layout_alignEnd="@+id/view"
+        android:layout_marginTop="41dp" />
+
+    <Spinner
+        android:id="@+id/listset1"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="right"
+        android:layout_alignBaseline="@+id/listset2"
+        android:layout_alignBottom="@+id/listset2"
+        android:layout_alignStart="@+id/view" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/listset2"
+        android:paddingTop="30dp"
+        android:id="@+id/view">
+        <EditText android:id="@+id/idee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Communication"
+        android:textColorHint="@color/gris"
+        android:textColor="@color/gris"
+        android:inputType="textMultiLine"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+</RelativeLayout>
