@@ -73,8 +73,6 @@ public class Message extends Activity{
         } else if (y == 7) {
             q = true;
             service = "#RCP";
-        } else if (y == 8) {
-            startActivity(new Intent(Message.this, MessagePresses.class));
         }
             send.setOnClickListener(new View.OnClickListener() {
                 @Override
