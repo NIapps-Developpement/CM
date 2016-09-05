@@ -21,5 +21,20 @@
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Biere spéciale"
+        android:layout_margin="20dp"
+        android:textColor="@color/gris_fonce"
+        android:textSize="20dp"
+        android:id="@+id/biere"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" /></RelativeLayout>
+    </android.support.design.widget.NavigationView>
+
 </android.support.v4.widget.DrawerLayout>
