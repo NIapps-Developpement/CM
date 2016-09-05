@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="7dp"
             android:layout_below="@+id/imageView">
-            <include layout="@layout/content_scrolling"
+            <include layout="@layout/content_presses"
                 /></LinearLayout>
 
     </RelativeLayout>
