@@ -33,7 +33,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    String showUrl = "http://cm.890m.com/newsfeedshow.php";
+    String showUrl = "http://cm.890m.com/biere.php";
     RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final TextView biere =(TextView)findViewById(R.id.biere);
         setSupportActionBar(toolbar);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -48,8 +49,18 @@ public class MainActivity extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        final Context contextnet = this.getApplicationContext();
-//Restart du text et instanciation de la request
+
+
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.content_frame
+                        , new FirstFragment())
+                .commit();
+
+
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST,
                 showUrl, new Response.Listener<JSONObject>() {
             @Override
@@ -61,16 +72,14 @@ public class MainActivity extends AppCompatActivity
 
                     //Récupération puis lecture des table id et idée avec affichage
                     //par ordre décroissant
-                    JSONArray messages = response.getJSONArray("biere");
-                    JSONObject bieres= messages.getJSONObject(0);
-                    String bier = bieres.toString();
-                    TextView biere= (TextView) findViewById(R.id.biere);
-                    biere.setText("La bière spéciale du moi est" + bier);
+                    JSONArray beer = response.getJSONArray("biere");
+                    for (int i = 0; i < beer.length(); i++) {
 
+                        JSONObject message = beer.getJSONObject(i);
+System.out.println(message);
+                        biere.setText("La bière du moi est " + message.getString("biere"));
 
-
-
-
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -88,16 +97,6 @@ public class MainActivity extends AppCompatActivity
         });
         requestQueue.add(jsonObjectRequest);
 
-
-
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-        android.app.FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.content_frame
-                        , new FirstFragment())
-                .commit();
     }
 
     @Override
