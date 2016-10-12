@@ -2,6 +2,7 @@ package com.niapp.agendacm;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -49,6 +50,7 @@ public class SecondFragment extends Fragment {
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
         drawer = (ImageButton)myView.findViewById(R.id.drawer);
         getCalendar();
+
         drawer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,6 +118,7 @@ public class SecondFragment extends Fragment {
 
                     ListView lvItem = (ListView)myView.findViewById(R.id.list_itemcal);
                     lvItem.setAdapter(adapter);
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();

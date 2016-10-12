@@ -19,8 +19,8 @@
             android:id="@+id/comite"
             android:textColor="@color/gris_clair"
             android:text="Comité de la\nTable Ronde"
-            android:textSize="40dp"
-            android:layout_margin="7dp"
+            android:textSize="60dp"
+            android:layout_marginTop="30dp"
             android:textAlignment="center"/>
     <TextView
         android:layout_width="match_parent"

@@ -26,7 +26,7 @@ public class FifthFragment extends Fragment {
         TextView comite = (TextView) myView.findViewById(R.id.comite);
         final DrawerLayout draw = (DrawerLayout) getActivity().findViewById(R.id.drawer_layout);
         drawer = (ImageButton)myView.findViewById(R.id.drawer);
-        Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "pol_spons.ttf");
+        Typeface type = Typeface.createFromAsset(getActivity().getAssets(), "pol_med.ttf");
         comite.setTypeface(type);
         drawer.setOnClickListener(new View.OnClickListener() {
             @Override

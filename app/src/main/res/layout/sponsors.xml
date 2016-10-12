@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/gris_clair">
 
     <RelativeLayout
         android:id="@+id/head"
@@ -20,14 +21,15 @@
             android:id="@+id/comite"
             android:textColor="@color/gris"
             android:text="Sponsors"
-            android:textSize="40dp"
-            android:layout_margin="7dp"
+            android:textSize="80dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp"
             android:textAlignment="center"/>
         <LinearLayout
             android:layout_below="@id/comite"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="fill_parent">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
@@ -41,7 +43,7 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
                 android:scrollbars="vertical"
-                android:src="@drawable/ban"
+                android:src="@drawable/uber"
                 android:layout_margin="10dp"/>
 
             <ImageView
@@ -49,44 +51,8 @@
                 android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
                 android:scrollbars="vertical"
-                android:src="@drawable/ban"
+                android:src="@drawable/classpro"
                 android:layout_margin="10dp"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:scrollbars="vertical"
-                android:src="@drawable/ban"
-                android:layout_margin="10dp"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:scrollbars="vertical"
-                android:src="@drawable/ban"
-                android:layout_margin="10dp"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:scrollbars="vertical"
-                android:src="@drawable/ban"
-                android:layout_margin="10dp"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:scrollbars="vertical"
-                android:src="@drawable/ban"
-                android:layout_margin="10dp"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
-                android:scrollbars="vertical"
-                android:src="@drawable/ban"
-                android:layout_margin="10dp"/>
-
         </LinearLayout>
 </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
