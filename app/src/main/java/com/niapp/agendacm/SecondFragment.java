@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amigold.fundapter.BindDictionary;
@@ -29,6 +30,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -118,7 +120,6 @@ public class SecondFragment extends Fragment {
 
                     ListView lvItem = (ListView)myView.findViewById(R.id.list_itemcal);
                     lvItem.setAdapter(adapter);
-
 
                 } catch (JSONException e) {
                     e.printStackTrace();

@@ -1,9 +1,12 @@
 package com.niapp.agendacm;
 
+import android.graphics.Typeface;
+import android.widget.TextView;
+
 /**
  * Created by Nathan on 17-08-16.
  */
-public class ItemCal {
+public class ItemCal{
     private String name;
     private String date;
     private String place;
@@ -38,5 +41,7 @@ public class ItemCal {
     public void setPlace(String place) {
         this.place = place;
     }
+
+
 
 }

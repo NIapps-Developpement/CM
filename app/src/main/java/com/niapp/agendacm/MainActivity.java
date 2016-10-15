@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity
 
                         JSONObject message = beer.getJSONObject(i);
 System.out.println(message);
-                        biere.setText("La bière du moi est " + message.getString("biere"));
+                        biere.setText("La bière du mois est " + message.getString("biere"));
 
                     }
 
