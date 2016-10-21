@@ -118,6 +118,7 @@ public class SecondFragment extends Fragment {
 
                     FunDapter adapter = new FunDapter(SecondFragment.this.getActivity(), itemcal, R.layout.item_layout_cal, dictionary);
 
+
                     ListView lvItem = (ListView)myView.findViewById(R.id.list_itemcal);
                     lvItem.setAdapter(adapter);
 

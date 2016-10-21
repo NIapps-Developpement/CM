@@ -5,8 +5,7 @@
     <string name="action_settings">Contact</string>
     <string name="messagetitre"><u><b>Ajout au NewsFeed</b></u></string>
     <string name="messageinfo"><b></b></string>
-    <string name="infoc">
-	<b><u>InfoComm\'</u></b> : Nathan Rossler (informatique@cercle-medecine.be)</string>
+    <string name="infoc"><b><u>InfoComm\'</u></b> : Nathan Rossler (informatique@cercle-medecine.be)</string>
     <string name="pres"><b><u>Président</u></b> : Maxime Melchior (president@cercle-medecine.be)</string>
     <string name="vp"><b><u>Vice-Président</u></b> : Alexis Loulas (vice-president@cerlce-medecine.be)</string>
     <string name="vpe"><b><u>Vice-Présidente</u></b> : Laure Brebant (vice-presidente@cercle-medecine.be)</string>
@@ -19,7 +18,7 @@
     <string name="event"><b><u>Events</u></b> : Jeanne Lambert, Céline van den Daele, Gaëlle Debruyn (evenements@cerlce-medecine.be)</string>
     <string name="inpho"><b><u>Info-photos</u></b> : Louise Moreau, Emma Riberry, Sacha Paternoster (photo@cerlce-medecine.be)</string>
     <string name="org"><b><u>Organe</u></b> : Pierre Rebuffat, Zoé van Lieshout, Elisa Clayes (organe@cerlce-medecine.be)</string>
-    <string name="pcm"><b><u>PCM</u></b> : Alexandra Baudhuin, Raphaëlle Parisot, El Ghali Bennounna (pcm@cerlce-medecine.be)</string>
+    <string name="pcm"><b><u>PCM</u></b> : Alexandra Baudhuin, Raphaëlle Parisot, El Ghali Bennounna, Mariam Aid (pcm@cerlce-medecine.be)</string>
     <string name="rcp"><b><u>RCP</u></b> : Georgios Walden, Vincent Leclercq (rcp@cerlce-medecine.be)</string>
     <string name="lasc"><b><u>LASC</u></b> : Léa Boulvain, Dominique Koko, Cécile Astachenko (scalp@cerlce-medecine.be)</string>
     <string name="sks"><b><u>SKS</u></b> : Romain Fourez, Valentin Colinet (sks@cerlce-medecine.be)</string>
