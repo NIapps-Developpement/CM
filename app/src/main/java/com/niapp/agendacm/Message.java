@@ -76,24 +76,6 @@ public class Message extends Activity{
             send.setOnClickListener(new View.OnClickListener() {
                 @Override
             public void onClick(View view) {
-                    RequestQueue queue = Volley.newRequestQueue(Message.this);
-                    String url ="http://cm.890m.com/admin.php";
-
-// Request a string response from the provided URL.
-                    StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                            new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    // Display the first 500 characters of the response string.
-                                }
-                            }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                        }
-                    });
-
-                    queue.add(stringRequest);
-
                     check = idea.getText().toString();
 
                     if(check.isEmpty()){
@@ -103,10 +85,37 @@ public class Message extends Activity{
                     }
 
                     msg = check;
-                    msg = msg.replace("'","\\\'");
+
 
                     if (q) {
+                        String Urlnotif = "http://cm.890m.com/admin.php";
+                    StringRequest requestnotif = new StringRequest(Request.Method.POST, Urlnotif, new Response.Listener<String>() {
 
+
+                        @Override
+                        public void onResponse(String response) {
+
+                            System.out.println(response.toString());
+                        }
+                    }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+
+                        }
+                    }) {
+                        //Method pour envoyer le texte
+                        @Override
+                        protected Map<String, String> getParams() throws AuthFailureError {
+                            Map<String, String> parameters = new HashMap<String, String>();
+                            parameters.put("msg", msg);
+                            parameters.put("nom ", service);
+                            return parameters;
+                        }
+                    };
+                    requestQueue.add(requestnotif);
+
+
+                        msg = msg.replace("'","\\\'");
                         //Instanciation de la request
                         StringRequest request = new StringRequest(Request.Method.POST, insertUrlmsg, new Response.Listener<String>() {
 
