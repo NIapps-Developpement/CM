@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cercle de Médecine</string>
+    <string name="app_name">CM ULB</string>
     <string name="titre"><b>NewsFeed du CM</b></string>
     <string name="large_text"></string>
     <string name="action_settings">Contact</string>

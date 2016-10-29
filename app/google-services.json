@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:365570819168:android:f76dabbfb1b6347a",
+        "mobilesdk_app_id": "1:365570819168:android:e0ca0aef09accfe1",
         "android_client_info": {
-          "package_name": "com.niapp.agendacm"
+          "package_name": "com.CM.agendacm"
         }
       },
       "oauth_client": [

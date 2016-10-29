@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.1" encoding="utf-8"?>
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.niapp.agendacm"
+    package="com.CM.agendacm"
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -16,27 +16,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         tools:replace="android:icon,android:label">
-        <activity android:name=".Accueil">
+        <activity android:name="com.CM.agendacm.Accueil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait" />
-        <activity android:name=".Message" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait"/>
-        <activity android:name=".MessagePresses" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait"/>
+        <activity android:name="com.CM.agendacm.MainActivity" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait" />
+        <activity android:name="com.CM.agendacm.Message" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait"/>
+        <activity android:name="com.CM.agendacm.MessagePresses" android:theme="@style/AppTheme.NoActionBar" android:screenOrientation="portrait"/>
         <!--²
                 Defining Services
             -->
         <service
-            android:name=".MyFirebaseMessagingService">
+            android:name="com.CM.agendacm.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
 
         <service
-            android:name=".MyFirebaseInstanceIDService">
+            android:name="com.CM.agendacm.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
