@@ -29,6 +29,18 @@
         android:layout_marginTop="10dp"
         android:layout_alignTop="@+id/tvName" />
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Large Text"
+        android:id="@+id/tvLink"
+        android:textColor="@android:color/transparent"
+        android:textSize="25dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/tvDate" />
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lieu"
