@@ -88,7 +88,7 @@ public class SecondFragment extends Fragment {
 
                         JSONObject message = messages.getJSONObject(i);
 
-                        ItemCal cal = new ItemCal(message.getString("name"), message.getString("dates"), message.getString("place"));
+                        ItemCal cal = new ItemCal(message.getString("name"), message.getString("dates"), message.getString("place"), message.getString("link"));
                         itemcal.add(cal);
 
 
@@ -110,6 +110,12 @@ public class SecondFragment extends Fragment {
                         @Override
                         public String getStringValue(ItemCal itemcal, int position) {
                             return "" + itemcal.getDate();
+                        }
+                    });
+                    dictionary.addStringField(R.id.tvLink, new StringExtractor<ItemCal>() {
+                        @Override
+                        public String getStringValue(ItemCal itemcal, int position) {
+                            return "" + itemcal.getLink();
                         }
                     });
 
