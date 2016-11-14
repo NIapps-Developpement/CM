@@ -28,7 +28,7 @@
         android:layout_below="@+id/ban"
         android:background="#101010"
         android:id="@+id/imageView" />
-    µ<ListView
+    <ListView
     android:layout_margin="7dp"
         android:id="@+id/list_itemcal"
         android:layout_width="fill_parent"

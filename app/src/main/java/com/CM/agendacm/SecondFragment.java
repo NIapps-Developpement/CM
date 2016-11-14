@@ -2,8 +2,10 @@ package com.CM.agendacm;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
@@ -11,8 +13,10 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amigold.fundapter.BindDictionary;
@@ -30,6 +34,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+
 
 /**
  * Created by Nathan on 16-08-16.
@@ -58,6 +63,7 @@ public class SecondFragment extends Fragment {
 
             }
         });
+
         return myView ;
     }
     public boolean getCalendar(){
@@ -79,7 +85,6 @@ public class SecondFragment extends Fragment {
 
 
                 try {
-
                     //Récupération puis lecture des table id et idée avec affichage
                     //par ordre décroissant
                     JSONArray messages = response.getJSONArray("calendar");
@@ -90,6 +95,10 @@ public class SecondFragment extends Fragment {
 
                         ItemCal cal = new ItemCal(message.getString("name"), message.getString("dates"), message.getString("place"), message.getString("link"));
                         itemcal.add(cal);
+
+
+
+
 
 
                     }
@@ -124,6 +133,21 @@ public class SecondFragment extends Fragment {
 
                     ListView lvItem = (ListView)myView.findViewById(R.id.list_itemcal);
                     lvItem.setAdapter(adapter);
+                    lvItem.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            // selected item
+                            String selected = ((TextView) view.findViewById(R.id.tvLink)).getText().toString();
+                            System.out.println(selected);
+
+                            if(selected.equals("r")){
+                            }else {
+                                Uri uri = Uri.parse(selected); // missing 'http://' will cause crashed
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                startActivity(intent);
+                            }
+                        }
+                    });
 
                 } catch (JSONException e) {
                     e.printStackTrace();

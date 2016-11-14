@@ -18,6 +18,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 /**
@@ -83,7 +86,9 @@ public class Message extends Activity{
                     }
 
                     msg = check;
-
+                    DateFormat df = new SimpleDateFormat("dd/MM");
+                    String date = df.format(Calendar.getInstance().getTime());
+                    final String servicefinal = service +" "+ date;
 
                     if (q) {
                         String Urlnotif = "http://cm.890m.com/admin.php";
@@ -106,7 +111,7 @@ public class Message extends Activity{
                         protected Map<String, String> getParams() throws AuthFailureError {
                             Map<String, String> parameters = new HashMap<String, String>();
                             parameters.put("msg", msg);
-                            parameters.put("nom ", service);
+                            parameters.put("nom ", servicefinal);
                             return parameters;
                         }
                     };
@@ -134,7 +139,7 @@ public class Message extends Activity{
                             protected Map<String, String> getParams() throws AuthFailureError {
                                 Map<String, String> parameters = new HashMap<String, String>();
                                 parameters.put("msg", msg);
-                                parameters.put("nom", service);
+                                parameters.put("nom", servicefinal);
                                 return parameters;
                             }
                         };
