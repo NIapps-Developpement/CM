@@ -9,7 +9,7 @@
     <string name="pres"><b><u>Président</u></b> : Maxime Melchior (president@cercle-medecine.be)</string>
     <string name="vp"><b><u>Vice-Président</u></b> : Alexis Loulas (vice-president@cercle-medecine.be)</string>
     <string name="vpe"><b><u>Vice-Présidente</u></b> : Laure Brebant (vice-presidente@cercle-medecine.be)</string>
-    <string name="trez"><b><u>Trésorières</u></b> : Eva Staub, Ingrid Tuzi (tresorie@cercle-medecine.be)</string>
+    <string name="trez"><b><u>Trésorières</u></b> : Eva Staub, Ingrid Tuzi (tresorerie@cercle-medecine.be)</string>
     <string name="secr"><b><u>Secrétaire</u></b> : Gaël Mayer (secretaire@cercle-medecine.be)</string>
     <string name="balef"><b><u>BALEF</u></b> : Axel Bony, Nathan Warnau, Frédéric Bertrand (bal-et-fetes@cercle-medecine.be)</string>
     <string name="banq"><b><u>Banquet</u></b> : Victor Matos, Jonathan Jacono (banquet@cercle-medecine.be)</string>
@@ -17,19 +17,21 @@
     <string name="eco"><b><u>Eco-Responsable</u></b> : Camille Collard, Mara Blistein (eco-responsable@cercle-medecine.be)</string>
     <string name="event"><b><u>Events</u></b> : Jeanne Lambert, Céline van den Daele, Gaëlle Debruyn (evenements@cercle-medecine.be)</string>
     <string name="inpho"><b><u>Info-photos</u></b> : Louise Moreau, Emma Riberry, Sacha Paternoster (photo@cercle-medecine.be)</string>
-    <string name="org"><b><u>Organe</u></b> : Pierre Rebuffat, Zoé van Lieshout, Elisa Clayes (organe@cercle-medecine.be)</string>
+    <string name="org"><b><u>Organe</u></b> : Pierre Rebuffat, Zoé van Lieshout (organe@cercle-medecine.be)</string>
     <string name="pcm"><b><u>PCM</u></b> : Alexandra Baudhuin, Raphaëlle Parisot, El Ghali Bennounna, Mariam Aid (pcm@cercle-medecine.be)</string>
     <string name="rcp"><b><u>RCP</u></b> : Georgios Walden, Vincent Leclercq (rcp@cercle-medecine.be)</string>
     <string name="lasc"><b><u>LASC</u></b> : Léa Boulvain, Dominique Koko, Cécile Astachenko (scalp@cercle-medecine.be)</string>
     <string name="sks"><b><u>SKS</u></b> : Romain Fourez, Valentin Colinet (sks@cercle-medecine.be)</string>
     <string name="bar"><b><u>BAR</u></b> : Naomi Rastapopoulos, Matias Thielemans, Sophie Darvile (bar@cercle-medecine.be)</string>
-    <string name="spons"><b><u>Sponsors</u></b> : Alexandre Duarte, Jéremy Henneaux (sponsors@cercle-medecine.be)</string>
-
-
+    <string name="spons"><b><u>Sponsors</u></b> : Alexandre Duarte, Mathilda Soupart (sponsors@cercle-medecine.be)</string>
+    <string name="fpres"><b><u>Président de baptême</u></b> : Adrien Lengelé</string>
+    <string name="folk"><b><u>Délégués folklore</u></b> : Benoit Semal, Mikael Leys</string>
 
     <string name="title_activity_scrollcontact">scrollcontact</string>
     <string name="title_activity_main">MainActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="noiko"></string>
 </resources>

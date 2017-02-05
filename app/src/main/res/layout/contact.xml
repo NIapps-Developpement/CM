@@ -239,16 +239,40 @@
         android:layout_margin="10dp"
         />
     <TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="@string/spons"
-    android:layout_marginLeft="10dp"
-    android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/spons"
+        android:layout_marginLeft="10dp"
+        android:scrollbars="vertical"
         android:id="@+id/spon"
         android:layout_below="@+id/bar"
         android:textColor="@color/gris_clair"
         android:layout_margin="10dp"
-    />
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/fpres"
+            android:layout_marginLeft="10dp"
+            android:scrollbars="vertical"
+            android:id="@+id/fpres"
+            android:layout_below="@+id/spon"
+            android:textColor="@color/gris_clair"
+            android:layout_margin="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/folk"
+            android:layout_marginLeft="10dp"
+            android:scrollbars="vertical"
+            android:id="@+id/folkl"
+            android:layout_below="@+id/fpres"
+            android:textColor="@color/gris_clair"
+            android:layout_margin="10dp"
+            />
 </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

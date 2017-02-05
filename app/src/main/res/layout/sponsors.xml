@@ -29,30 +29,64 @@
             android:layout_below="@id/comite"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent">
-            <ImageView
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/pfizer"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:layout_marginLeft="10dp"
                 android:scrollbars="vertical"
-                android:src="@drawable/pfizer"
-                android:layout_margin="10dp"/>
+                android:background="@drawable/pfizer"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:padding="20dp"/>
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/uber"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
                 android:scrollbars="vertical"
                 android:src="@drawable/uber"
-                android:layout_margin="10dp"/>
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"/>
 
-            <ImageView
+            <ImageButton
+                android:id="@+id/classpro"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:scrollbars="vertical"
+                android:background="@drawable/classpro"
+                android:layout_marginBottom="20dp"/>
+            <ImageButton
+                android:id="@+id/jupiler"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginLeft="10dp"
                 android:scrollbars="vertical"
-                android:src="@drawable/classpro"
-                android:layout_margin="10dp"/>
+                android:src="@drawable/jup"
+                android:backgroundTint="@color/gris_clair"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"/>
+            <ImageButton
+                android:id="@+id/noiko"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:scrollbars="vertical"
+                android:background="@drawable/noiko"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"/>
+            <ImageButton
+                android:id="@+id/lpm"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scrollbars="vertical"
+                android:backgroundTint="@color/gris_clair"
+                android:src="@drawable/lpm"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="20dp"/>
         </LinearLayout>
 </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>

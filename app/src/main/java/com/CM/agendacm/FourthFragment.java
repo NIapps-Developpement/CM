@@ -80,7 +80,7 @@ public class FourthFragment extends Fragment {
                                 String mdpgood = mdp.getString("Mdp");
                                 System.out.println(mdpgood);
                                 if (mdpgood.equals(mdptry)) {
-                                    if(i==8){
+                                    if(i==10){
                                         startActivity(new Intent(FourthFragment.this.getActivity(), MessagePresses.class));
                                         setI(i);
                                         v.cancel();
